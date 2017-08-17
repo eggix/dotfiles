@@ -1,0 +1,11 @@
+#!/bin/sh
+
+lsmod | grep uvcvideo | sed 's/   */:/g' | cut -d: -f3 |( read line
+echo ''; echo '';  
+if [ $line != '0' ]; then 
+	echo 'FF0000' 
+#else 
+#	echo '00FF00'
+fi 	
+)
+	#echo 'test'  | ( read line ; echo $line )
